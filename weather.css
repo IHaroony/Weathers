@@ -1,0 +1,177 @@
+body {
+    background-image: url("weatherpic.avif");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-color: #ffffffe5;
+    margin: 0;
+}
+
+h1 {
+    color: #ffffff;
+    position: fixed;
+    font-size: 50px;
+    font-family: 'Lato', sans-serif; /* or 'Montserrat', sans-serif */
+    font-weight: 300;
+    left: 50%;
+    top: 3%;
+    transform: translateX(-50%);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    white-space: nowrap;
+    overflow: hidden; /* Ensures the text is hidden while "typing" */
+    width: 17ch; /* Width set according to character count (adjust based on your text length) */
+    animation: typing 4s steps(22, end), blink 0.9s step-end infinite; /* Typing and blinking cursor */
+    border-right: 2px solid rgba(255, 255, 255, 0.75); /* The blinking cursor */
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 16ch; /* Width according to the character count */
+    }
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+
+
+input[type="text"] {
+    padding: 20px;
+    font-size: 18px;
+    width: 250px;
+    margin-top: 300px;
+    border: 5px solid #ffffff46;
+    border-radius: 15px;
+    background: rgba(189, 168, 168, 0.2);
+    color: #000000;
+    font-size: 18px;
+}
+
+button {
+    color: #3a2d2da9;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 55px;
+    background-color: #f0f0f0; /* Add default background color */
+}
+
+button:hover {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+
+#weatherDisplay {
+    margin-top: 100px;
+    background: rgba(255, 147, 121, 0.603);
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+}
+
+#weatherDisplay h2 {
+    margin: 0;
+    color: #f4f4f5;
+    font-size: 50px;
+    font-family: 'Lato', sans-serif; /* or 'Montserrat', sans-serif */
+
+}
+
+#weatherDisplay p {
+    margin: 100px 0;
+    color: #000000;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif; /* or 'Montserrat', sans-serif */
+
+
+
+}
+
+    
+.secret-message {
+    position:fixed;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.secret-message:hover {
+    color: transparent; /* Hide the original text when hovered */
+}
+
+.secret-message:hover::after {
+    content: "Enjoy :)"; /* The replacement text */
+    position: absolute;
+    top: 20px;
+    left: 170px;
+    color: #000000; /* Style the replacement text */
+    white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+    input[type="text"] {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+@media (max-width: 1200px) {
+    h1 {
+        left: 300px;
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    h1 {
+        left: 300px;
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        left: 300px;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 376px) {
+    h1 {
+        left: 200px;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        left: 100px;
+        font-size: 20px;
+    }
+}
